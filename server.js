@@ -8,7 +8,6 @@ connectDB()
 
 app.use(express.json({  extended: false }))
 
-app.use('/', () => res.send({ msg: "Que chucha" }) )
 app.use('/api/users', require('./routes/users'))
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/articles', require('./routes/articles'))
