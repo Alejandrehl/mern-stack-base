@@ -35,7 +35,7 @@ const Navbar = ({ title, icon }) => {
     );
 
     return (
-        <nav className="blue" role="navigation" style={{ marginBottom: "30px" }}>
+        <nav className="grey darken-4" role="navigation" style={{ marginBottom: "30px" }}>
             <div className="nav-wrapper container">
                 <a id="logo-container" href="/" className="brand-logo">
                     Logo
