@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/layouts/Navbar'
 import Alerts from './components/layouts/Alerts'
 import Home from './components/pages/Home'
-import Blog from './components/pages/Blog'
-import About from './components/pages/About'
-import Services from './components/pages/Services'
 import Articles from './components/articles/Articles'
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -41,9 +38,6 @@ const App = () => {
                     <Alerts />
                     <Switch>
                       <PrivateRoute exact path='/' component={Home} />
-                      <Route exact path='/blog' component={Blog} />
-                      <Route exact path='/about' component={About} />
-                      <Route exact path='/services' component={Services} />
                       <Route exact path='/articles' component={Articles} />
                       <Route exact path='/register' component={Register} />
                       <Route exact path='/login' component={Login} />
