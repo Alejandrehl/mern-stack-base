@@ -35,14 +35,21 @@ const Navbar = ({ title, icon }) => {
     );
 
     return (
-        <nav style={{ marginBottom: '30px' }} className="grey darken-4">
-            <div className="nav-wrapper">
-                <a href="/" className="brand-logo">
-                    <i className="material-icons">{icon}</i>{title}
+        <nav className="blue" role="navigation">
+            <div className="nav-wrapper container">
+                <a id="logo-container" href="/" className="brand-logo">
+                    Logo
                 </a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    { isAuthenticated ? authLinks : guestLinks }    
-                </ul>
+            <ul className="right hide-on-med-and-down">
+                { isAuthenticated ? authLinks : guestLinks } 
+            </ul>
+
+            <ul id="nav-mobile" className="sidenav">
+                { isAuthenticated ? authLinks : guestLinks } 
+            </ul>
+            <a href="#" data-target="nav-mobile" className="sidenav-trigger">
+                <i className="material-icons">menu</i>
+            </a>
             </div>
         </nav>
     )

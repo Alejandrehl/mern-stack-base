@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/layouts/Navbar'
+import Footer from './components/layouts/Footer'
 import Alerts from './components/layouts/Alerts'
 import Home from './components/pages/Home'
 import Landing from './components/pages/Landing'
@@ -46,6 +47,7 @@ const App = () => {
                     </Switch>
                   </div>
                 </div>
+              <Footer />
             </Fragment>
           </Router>
         </AlertState>
