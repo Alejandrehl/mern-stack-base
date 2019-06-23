@@ -48,16 +48,14 @@
 * **Steps:**
     1. Register/Login your account
     2. [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-    3. cd client
-    4. npm run build
-    5. Set static assets in production: server.js file
-    6. Add & config production.json in config folder **(Credentials must be different of default.json)**
-    7. Add & config Heroku to root package.json **(script/heroku-postbuild)**
-    8. Exec heroku commands in terminal: 
+    3. Set static assets in production: server.js file
+    4. Add & config production.json in config folder **(Credentials must be different of default.json)**
+    5. Add & config Heroku to root package.json **(script/heroku-postbuild)**
+    6. Exec heroku commands in terminal: 
         - heroku login
         - heroku create
-    9. Enter to project in Heroku
-    10. Show deploy window
-    11. Follow steps for deploy app
-    12. **Deploy to Heroku command:** git push heroku master
+    7. Enter to project in Heroku
+    8. Show deploy window
+    9. Follow steps for deploy app
+    10. **Deploy to Heroku command:** git push heroku master
 
