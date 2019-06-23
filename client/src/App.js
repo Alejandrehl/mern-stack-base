@@ -5,7 +5,6 @@ import Footer from './components/layouts/Footer'
 import Alerts from './components/layouts/Alerts'
 import Home from './components/pages/Home'
 import Landing from './components/pages/Landing'
-import Articles from './components/articles/Articles'
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import PrivateRoute from './components/routing/PrivateRoutes'
@@ -39,9 +38,8 @@ const App = () => {
                   <div className="row">
                     <Alerts />
                     <Switch>
-                      <PrivateRoute exact path='/' component={Home} />
-                      <Route exact path='/landing' component={Landing} />
-                      <Route exact path='/articles' component={Articles} />
+                      <Route exact path='/' component={Landing} />
+                      <PrivateRoute exact path='/home' component={Home} />
                       <Route exact path='/register' component={Register} />
                       <Route exact path='/login' component={Login} />
                     </Switch>
