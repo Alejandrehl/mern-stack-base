@@ -1,8 +1,14 @@
 import React, { Fragment } from 'react'
+import BusinessImg from '../../assets/images/business.jpg'
 
 const Landing = () => {
     return (
         <Fragment>
+            <div class="parallax-container">
+                <div class="parallax">
+                    <img src={BusinessImg} />
+                </div>
+            </div>
             <div className="section no-pad-bot" id="index-banner" style={{ marginBottom: '30px' }}>
                 <br/><br/>
                 <h1 className="header center black-text">Starter Template</h1>

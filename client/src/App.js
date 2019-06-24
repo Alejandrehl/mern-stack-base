@@ -33,19 +33,19 @@ const App = () => {
         <AlertState>
           <Router>
             <Fragment>
-              <Navbar />
-                <div className="container">
-                  <div className="row">
-                    <Alerts />
-                    <Switch>
-                      <Route exact path='/' component={Landing} />
-                      <PrivateRoute exact path='/home' component={Home} />
-                      <Route exact path='/register' component={Register} />
-                      <Route exact path='/login' component={Login} />
-                    </Switch>
-                  </div>
+              <div className="container" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
+                <Navbar />
+                <div className="row">
+                  <Alerts />
+                  <Switch>
+                    <Route exact path='/' component={Landing} />
+                    <PrivateRoute exact path='/home' component={Home} />
+                    <Route exact path='/register' component={Register} />
+                    <Route exact path='/login' component={Login} />
+                  </Switch>
                 </div>
-              <Footer />
+                <Footer />
+              </div>
             </Fragment>
           </Router>
         </AlertState>

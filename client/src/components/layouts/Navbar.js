@@ -29,29 +29,34 @@ const Navbar = ({ title, icon }) => {
 
     const guestLinks = (
         <Fragment>
+            <li><Link to="/about">Quienes Somos</Link></li>
+            <li><Link to="/services">Servicios</Link></li>
+            <li><Link to="/articles">Artículos</Link></li>
             <li><Link to="/login">Acceder</Link></li>
             <li><Link to="/register">Registrar</Link></li>
         </Fragment>
     );
 
     return (
-        <nav className="grey darken-4" role="navigation" style={{ marginBottom: "30px" }}>
-            <div className="nav-wrapper container">
-                <a id="logo-container" href="/" className="brand-logo">
-                    Logo
-                </a>
-            <ul className="right hide-on-med-and-down">
-                { isAuthenticated ? authLinks : guestLinks } 
-            </ul>
+        <Fragment>
+            <nav className="black" role="navigation">
+                <div className="nav-wrapper container">
+                    <a id="logo-container" href="/" className="brand-logo">
+                        Logo
+                    </a>
+                <ul className="right hide-on-med-and-down">
+                    { isAuthenticated ? authLinks : guestLinks } 
+                </ul>
 
-            <ul id="nav-mobile" className="sidenav">
-                { isAuthenticated ? authLinks : guestLinks } 
-            </ul>
-            <a href="#" data-target="nav-mobile" className="sidenav-trigger">
-                <i className="material-icons">menu</i>
-            </a>
-            </div>
-        </nav>
+                <ul id="nav-mobile" className="sidenav">
+                    { isAuthenticated ? authLinks : guestLinks } 
+                </ul>
+                <a href="#" data-target="nav-mobile" className="sidenav-trigger">
+                    <i className="material-icons">menu</i>
+                </a>
+                </div>
+            </nav>
+        </Fragment>
     )
 }
 
