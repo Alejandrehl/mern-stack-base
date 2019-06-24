@@ -1,12 +1,10 @@
-import React, {Fragment, useContext } from 'react'
+import React, {Fragment, useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import AuthContext from '../../context/auth/authContext'
 import ArticleContext from '../../context/article/articleContext'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
 import Typography from '@material-ui/core/Typography';
 import MaterialLink from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
@@ -15,11 +13,17 @@ import Container from '@material-ui/core/Container';
 
 const Navbar = ({ title, icon }) => {
     const classes = useStyles();
+
     const authContext = useContext(AuthContext)
-    const { isAuthenticated, logout } = authContext
+    const { isAuthenticated, logout, loadUser } = authContext
 
     const articleContext = useContext(ArticleContext)
     const { clearArticles } = articleContext
+  
+    useEffect( () =>{
+      loadUser()
+      // eslint-disable-next-line
+  }, [])
 
     const onLogout = () => {
         logout()
@@ -62,9 +66,6 @@ const Navbar = ({ title, icon }) => {
                         >
                             <Link to="/" className="black-text">{title}</Link>
                         </Typography>
-                        <IconButton>
-                            <SearchIcon />
-                        </IconButton>
                         { !isAuthenticated ? 
                             <Button variant="outlined" size="small">
                                 <Link to="/login" className="black-text">Ingresar</Link>

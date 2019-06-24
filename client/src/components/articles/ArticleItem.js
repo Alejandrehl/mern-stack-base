@@ -15,7 +15,7 @@ const ArticleItem = ({ article }) => {
 
     return (
         <Fragment>
-            <div className="col s12">
+            <div className="col s12 m6 l6">
                 <div className="card">
                     <h4>{title}</h4>
                     <div className="card-content">

@@ -46,8 +46,8 @@ const ArticleForm = () => {
     }
 
     return (
-        <form className="col s12" onSubmit={onSubmit}>
-            <h3>{ current ? 'Actualizar Artículo' : 'Agregar Artículo' }</h3>
+        <form className="col s12 m8 l8 offset-m8 offset-l2" onSubmit={onSubmit} style={{ marginTop: '30px' }}>
+            <h3 style={{ marginBottom: '50px' }}>{ current ? 'Actualizar Artículo' : 'Agregar Artículo' }</h3>
             <div className="row">
                 <div className="input-field col s12">
                     <input 

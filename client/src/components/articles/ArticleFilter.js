@@ -21,7 +21,7 @@ const ArticleFilter = () => {
     }
 
     return (
-        <nav>
+        <nav className="container">
             <div className="nav-wrapper">
                 <form>
                     <div className="input-field">
@@ -37,7 +37,6 @@ const ArticleFilter = () => {
                                 search
                             </i>
                         </label>
-                        <i className="material-icons">close</i>
                     </div>
                 </form>
             </div>
