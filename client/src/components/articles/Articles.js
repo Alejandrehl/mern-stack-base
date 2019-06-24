@@ -17,7 +17,7 @@ const Articles = () => {
 
     return (
         <Fragment>
-            <div className="col s12 m12 l12">
+            <div className="col s12 m12 l12" style={{ marginBottom: '50px', marginTop: '80px' }}>
                 <ArticleFilter />
                 <ArticleForm />
                 { articles !== null && !loading 

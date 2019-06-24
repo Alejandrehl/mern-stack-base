@@ -50,10 +50,13 @@ const Navbar = ({ title, icon }) => {
                     <Toolbar className={classes.toolbar}>
                         { !isAuthenticated ?
                             <Button size="small">
-                                Suscribir
+                                <Link to="/register" className="black-text">Registrar</Link>
                             </Button> :
                             <Button size="small">
+                              { window.location.pathname === '/articles' ? 
+                                <Link to="/" className="black-text">Inicio</Link> : 
                                 <Link to="/articles" className="black-text">Crear Artículo</Link>
+                              }
                             </Button>
                         }
                         <Typography
