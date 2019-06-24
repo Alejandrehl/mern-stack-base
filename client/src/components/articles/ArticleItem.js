@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import corporateAgent from '../../assets/images/corporate-agent.jpg'
 import PropTypes from 'prop-types'
 import ArticleContext from '../../context/article/articleContext'
 
@@ -18,10 +17,7 @@ const ArticleItem = ({ article }) => {
         <Fragment>
             <div className="col s12">
                 <div className="card">
-                    <div className="card-image">
-                        <img src={corporateAgent} alt="Business" />
-                        <span className="card-title truncate">{title}</span>
-                    </div>
+                    <h4>{title}</h4>
                     <div className="card-content">
                         <p className="truncate">{content}</p>
                     </div>

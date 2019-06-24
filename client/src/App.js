@@ -2,6 +2,10 @@ import React, { Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Alerts from './components/layouts/Alerts'
 import Landing from './components/pages/landing/Landing'
+import Home from './components/pages/Home'
+import Navbar from './components/layouts/Navbar'
+import Register from './components/auth/Register';	
+import Login from './components/auth/Login';
 
 import ArticleState from './context/article/ArticleState'
 import AuthState from './context/auth/AuthState'
@@ -27,11 +31,17 @@ const App = () => {
         <AlertState>
           <Router>
             <Fragment>
-              <div className="row">
-                <Alerts />
-                <Switch>
-                  <Route exact path='/' component={Landing} />
-                </Switch>
+              <div className="container">
+                <div className="row">
+                  <Navbar />
+                  <Alerts />
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path='/landing' component={Landing} />
+                    <Route exact path='/register' component={Register} />	
+                    <Route exact path='/login' component={Login} />
+                  </Switch>
+                </div>
               </div>
             </Fragment>
           </Router>
