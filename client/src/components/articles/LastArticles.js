@@ -1,8 +1,9 @@
 import React from 'react'
-import Divider from '@material-ui/core/Divider';
+import Divider from '@material-ui/core/Divider'
 import Spinner from '../layouts/Spinner'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
+import { Link } from 'react-router-dom'
 
 const LastArticles = ({articles, loading}) => {
     return (
@@ -23,7 +24,7 @@ const LastArticles = ({articles, loading}) => {
                         </p>
                     </div>
                     <div className="card-action">
-                        <a href="#">Leer más</a>
+                        <Link to="">Leer más</Link>
                     </div>
                     </div>
                 </div>
