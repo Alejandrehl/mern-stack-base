@@ -18,9 +18,9 @@ const Articles = () => {
         // eslint-disable-next-line
     }, [])
 
-    if (articles !== null && articles.length === 0 && !loading) {
-        return <h4>Debes agregar un artículo</h4>
-    }
+    // if (articles !== null && articles.length === 0 && !loading) {
+    //     return <h4>Debes agregar un artículo</h4>
+    // }
 
     return (
         <Fragment>

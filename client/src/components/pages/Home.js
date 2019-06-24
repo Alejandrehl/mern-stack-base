@@ -21,10 +21,6 @@ export default function Landing() {
       // eslint-disable-next-line
   }, [])
 
-  if (articles !== null && articles.length === 0 && !loading) {
-    return <h4>Aún no se han agregado artículos.</h4>
-}
-
   return (
     <Fragment>
       <CssBaseline />
