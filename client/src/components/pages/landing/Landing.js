@@ -14,18 +14,7 @@ import Link from '@material-ui/core/Link';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Spinner from '../../layouts/Spinner'
-
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://www.linkedin.com/in/alejandrrhernandez/">
-        YouKnowCode
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
+import MainFeaturedArticle from '../../articles/MainFeaturedArticle'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -98,19 +87,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const sections = [
-  'Technology',
-  'Design',
-  'Culture',
-  'Business',
-  'Politics',
-  'Opinion',
-  'Science',
-  'Health',
-  'Style',
-  'Travel',
-];
-
 const featuredPosts = [
   {
     title: 'Featured post',
@@ -155,35 +131,7 @@ export default function Landing() {
       <CssBaseline />
       <Container maxWidth="lg">
         <main>
-          {/* Main featured post */}
-          <Paper className={classes.mainFeaturedPost}>
-            {/* Increase the priority of the hero background image */}
-            {
-              <img
-                style={{ display: 'none' }}
-                src="https://source.unsplash.com/user/erondu"
-                alt="background"
-              />
-            }
-            <div className={classes.overlay} />
-            <Grid container>
-              <Grid item md={6}>
-                <div className={classes.mainFeaturedPostContent}>
-                  <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Title of a longer featured blog post
-                  </Typography>
-                  <Typography variant="h5" color="inherit" paragraph>
-                    Multiple lines of text that form the lede, informing new readers quickly and
-                    efficiently about what&apos;s most interesting in this post&apos;s contents.
-                  </Typography>
-                  <Link variant="subtitle1" href="#">
-                    Continue reading…
-                  </Link>
-                </div>
-              </Grid>
-            </Grid>
-          </Paper>
-          {/* End main featured post */}
+          <MainFeaturedArticle />
           {/* Sub featured posts */}
           <Grid container spacing={4} className={classes.cardGrid}>
             {featuredPosts.map(post => (
@@ -230,7 +178,7 @@ export default function Landing() {
               { articles !== null && !loading ?
                 articles.map(article => (
                   <div className="col s12 m12 l12" key={article._id}>
-                    <h2 className="header">{article.title}</h2>
+                    <h2 className="header truncate">{article.title}</h2>
                     <div className="card horizontal">
                       <div className="card-stacked">
                         <div className="card-content">
