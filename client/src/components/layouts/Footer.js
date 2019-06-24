@@ -9,7 +9,7 @@ const MadeWithLove = () => {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Built with love by the '}
       <Link color="inherit" href="https://www.linkedin.com/in/alejandrrhernandez/">
-        YouKnowCode
+        RubikHub
       </Link>
       {' team.'}
     </Typography>

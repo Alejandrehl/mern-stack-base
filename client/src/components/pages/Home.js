@@ -10,11 +10,11 @@ import SubFeaturedArticles from '../articles/SubFeaturedArticles'
 import LastArticles from '../articles/LastArticles'
 import Sidebar from './Sidebar'
 
-export default function Landing() {
+export default function Home() {
   const classes = useStyles();
 
   const articleContext = useContext(ArticleContext)
-  const { articles, getArticlesList, loading } = articleContext
+  const { getArticlesList } = articleContext
 
   useEffect( () =>{
       getArticlesList()
@@ -29,7 +29,7 @@ export default function Landing() {
           <MainFeaturedArticle />
           <SubFeaturedArticles />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <LastArticles articles={articles} loading={loading} />
+            <LastArticles />
             <Sidebar />
           </Grid>
         </main>
