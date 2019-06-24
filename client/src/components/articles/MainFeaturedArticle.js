@@ -24,14 +24,13 @@ const MainFeaturedArticle = () => {
                 <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                     <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Title of a longer featured blog post
+                    Título del artículo más destacado por los usuarios
                     </Typography>
                     <Typography variant="h5" color="inherit" paragraph>
-                    Multiple lines of text that form the lede, informing new readers quickly and
-                    efficiently about what&apos;s most interesting in this post&apos;s contents.
+                      Múltiples lineas de contenido interesante para llamar la atención de los usuarios
                     </Typography>
                     <Link className="white-text" variant="subtitle1" href="#">
-                    Continue reading…
+                    Ver más…
                     </Link>
                 </div>
                 </Grid>

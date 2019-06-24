@@ -13,16 +13,16 @@ const SubFeaturedArticles = () => {
     
     const featuredPosts = [
         {
-          title: 'Featured post',
-          date: 'Nov 12',
+          title: 'Artículo Destacado 2',
+          date: '12 de Noviembre 2019',
           description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
+            'Contenido interesante sobre el artículo.',
         },
         {
-          title: 'Post title',
-          date: 'Nov 11',
+          title: 'Artículo Destacado 3',
+          date: '15 de Agosto 2019',
           description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
+            'Contenido interesante sobre el artículo.',
         },
       ];
 
@@ -44,7 +44,7 @@ const SubFeaturedArticles = () => {
                         {post.description}
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
-                        Continue reading...
+                        Ver más...
                     </Typography>
                     </CardContent>
                 </div>

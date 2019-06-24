@@ -28,7 +28,7 @@ const LastArticles = () => {
                             </p>
                         </div>
                         <div className="card-action">
-                            <Link to="">Leer más</Link>
+                            <Link to="">Ver más</Link>
                         </div>
                         </div>
                     </div>
