@@ -18,6 +18,19 @@ router.get('/', auth, async (req, res) => {
     }
 })
 
+// @route   GET api/articles/list
+// @desc    Get all articles
+// @access  Private
+router.get('/list', async (req, res) => {
+    try {
+        const articles = await Article.find().sort({ date: -1 })
+        res.json(articles)
+    } catch(err) {
+        console.error(err.message)
+        res.status(500).send('Server Error')
+    }
+})
+
 // @route   POST api/articles
 // @desc    Add new article
 // @access  Private
