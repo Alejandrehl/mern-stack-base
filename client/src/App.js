@@ -6,6 +6,7 @@ import Home from './components/pages/Home'
 import Navbar from './components/layouts/Navbar'
 import Register from './components/auth/Register';	
 import Login from './components/auth/Login';
+import PrivateRoute from './components/routing/PrivateRoutes'
 
 import ArticleState from './context/article/ArticleState'
 import AuthState from './context/auth/AuthState'
@@ -36,8 +37,8 @@ const App = () => {
                   <Navbar />
                   <Alerts />
                   <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path='/landing' component={Landing} />
+                    <Route exact path="/" component={Landing} />
+                    <PrivateRoute exact path='/articles' component={Home} />
                     <Route exact path='/register' component={Register} />	
                     <Route exact path='/login' component={Login} />
                   </Switch>

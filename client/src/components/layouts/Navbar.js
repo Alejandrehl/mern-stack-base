@@ -27,16 +27,16 @@ const Navbar = ({ title, icon }) => {
     }
 
     const sections = [
-        'Technology',
-        'Design',
-        'Culture',
-        'Business',
-        'Politics',
-        'Opinion',
-        'Science',
-        'Health',
-        'Style',
-        'Travel',
+        'Tecnología',
+        'Diseño',
+        'Cultura',
+        'Negocios',
+        'Política',
+        'Opinión',
+        'Ciencia',
+        'Salud',
+        'Estilo',
+        'Viajes',
       ];
 
     return (
@@ -49,7 +49,7 @@ const Navbar = ({ title, icon }) => {
                                 Suscribir
                             </Button> :
                             <Button size="small">
-                                Crear Artículo
+                                <Link to="/articles" className="black-text">Crear Artículo</Link>
                             </Button>
                         }
                         <Typography

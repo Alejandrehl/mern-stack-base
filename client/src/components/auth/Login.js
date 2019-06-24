@@ -11,7 +11,7 @@ const Login = props => {
 
     useEffect( () => {
         if (isAuthenticated) {
-            props.history.push('/home')
+            props.history.push('/')
         }
 
         if (error === 'Invalid Credentials') {
@@ -44,15 +44,16 @@ const Login = props => {
 
     return (
         <Fragment>
-            <div className="col s12  m8 l8 offset-l2">
+            <div className="col s12  m8 l8 offset-l2" style={{ marginTop: '30px' }}>
                 <div className="card">
                     <div className="card-content center">
                         <span className="card-title">
-                            <h3>Account Login</h3>
+                            <h3>Ingresar a mi cuenta</h3>
                         </span>
                         <form
                             className="container"
-                            onSubmit={onSubmit} >
+                            onSubmit={onSubmit}
+                            style={{ marginTop: '50px' }} >
                             <div className="row">
                                 <div className="input-field">
                                     <input 
@@ -76,7 +77,7 @@ const Login = props => {
                                         required />
                                     <label htmlFor="password">Contraseña</label>
                                 </div>
-                                <div className="input-field">
+                                <div className="input-field" style={{ marginTop: '50px' }}>
                                     <button className="btn waves-effect waves-light" type="submit" name="action">
                                         Confirmar <i className="material-icons right">send</i>
                                     </button>

@@ -11,7 +11,7 @@ const Register = props => {
 
     useEffect( () => {
         if (isAuthenticated) {
-            props.history.push('/home')
+            props.history.push('/')
         }
 
         if (error === 'User already exists.') {
@@ -45,15 +45,16 @@ const Register = props => {
 
     return (
         <Fragment>
-            <div className="col s12  m8 l8 offset-l2">
+            <div className="col s12  m8 l8 offset-l2" style={{ marginTop: '30px' }}>
                 <div className="card">
                     <div className="card-content center">
                         <span className="card-title">
-                            <h3>Account Register</h3>
+                            <h3>Registrar</h3>
                         </span>
                         <form
                             className="container"
-                            onSubmit={onSubmit} >
+                            onSubmit={onSubmit} 
+                            style={{ marginTop: '50px' }} >
                             <div className="row">
                                 <div className="input-field">
                                     <input 
@@ -101,7 +102,7 @@ const Register = props => {
                                         minLength="6" />
                                     <label htmlFor="passwordConfirmation">Confirmar Contraseña</label>
                                 </div>
-                                <div className="input-field">
+                                <div className="input-field" style={{ marginTop: '50px' }}>
                                     <button className="btn waves-effect waves-light" type="submit" name="action">
                                         Confirmar <i className="material-icons right">send</i>
                                     </button>
