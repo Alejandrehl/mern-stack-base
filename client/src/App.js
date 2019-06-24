@@ -4,7 +4,7 @@ import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
 import Alerts from './components/layouts/Alerts'
 import Home from './components/pages/Home'
-import Landing from './components/pages/Landing'
+import Landing from './components/pages/landing/Landing'
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import PrivateRoute from './components/routing/PrivateRoutes'

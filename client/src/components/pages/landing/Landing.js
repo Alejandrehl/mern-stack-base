@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
-import BusinessImg from '../../assets/images/business.jpg'
+import BusinessImg from '../../../assets/images/business.jpg'
+import Button from '@material-ui/core/Button';
 
 const Landing = () => {
     return (
         <Fragment>
-            <div class="parallax-container">
-                <div class="parallax">
+            <div className="parallax-container">
+                <div className="parallax">
                     <img src={BusinessImg} />
                 </div>
             </div>
@@ -18,7 +19,9 @@ const Landing = () => {
                     </h5>
                 </div>
                 <div className="center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button" className="btn-large waves-effect waves-light blue">Contactar</a>
+                    <Button variant="contained" color="primary">
+                        Contactar
+                    </Button>
                 </div>
                 <br/><br/>
             </div>
