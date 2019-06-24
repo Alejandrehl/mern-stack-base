@@ -39,7 +39,7 @@ const Navbar = ({ title, icon }) => {
 
     return (
         <Fragment>
-            <nav className="black" role="navigation">
+            <nav className="blue" role="navigation">
                 <div className="nav-wrapper container">
                     <a id="logo-container" href="/" className="brand-logo">
                         Logo
