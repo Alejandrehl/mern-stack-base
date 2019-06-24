@@ -16,17 +16,13 @@ import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import Markdown from './Markdown';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
 
 function MadeWithLove() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
+      <Link color="inherit" href="https://www.linkedin.com/in/alejandrrhernandez/">
+        YouKnowCode
       </Link>
       {' team.'}
     </Typography>
@@ -132,24 +128,14 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
-
 const archives = [
-  'March 2020',
-  'February 2020',
-  'January 2020',
-  'December 2019',
-  'November 2019',
-  'October 2019',
-  'September 2019',
-  'August 2019',
-  'July 2019',
-  'June 2019',
-  'May 2019',
-  'April 2019',
+  'Julio 2019',
+  'Junio 2019',
+  'Mayo 2019',
+  'Abril 2019',
 ];
 
-const social = ['GitHub', 'Twitter', 'Facebook'];
+const social = ['LinkedIn'];
 
 export default function Landing() {
   const classes = useStyles();
@@ -159,7 +145,7 @@ export default function Landing() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Toolbar className={classes.toolbar}>
-          <Button size="small">Subscribe</Button>
+          <Button size="small">Suscribir</Button>
           <Typography
             component="h2"
             variant="h5"
@@ -168,13 +154,13 @@ export default function Landing() {
             noWrap
             className={classes.toolbarTitle}
           >
-            Blog
+            ASCONTLAB
           </Typography>
           <IconButton>
             <SearchIcon />
           </IconButton>
           <Button variant="outlined" size="small">
-            Sign up
+            Ingresar
           </Button>
         </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
@@ -260,29 +246,27 @@ export default function Landing() {
             {/* Main content */}
             <Grid item xs={12} md={8}>
               <Typography variant="h6" gutterBottom>
-                From the Firehose
+                Últimos artículos
               </Typography>
               <Divider />
-              {posts.map(post => (
-                <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-                  {post}
-                </Markdown>
-              ))}
+              {/* AQUI DEBEN IR LOS ULTIMOS 3 POSTS ESCRITOS */}
             </Grid>
             {/* End main content */}
             {/* Sidebar */}
             <Grid item xs={12} md={4}>
               <Paper elevation={0} className={classes.sidebarAboutBox}>
                 <Typography variant="h6" gutterBottom>
-                  About
+                  Sobre mí
                 </Typography>
                 <Typography>
-                  Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit
-                  amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+                  Profesional con gran capacidad y liderazgo en administración del equipo que tiene a cargo los procesos de contabilidad general en norma chilena e IFRS, Cuentas por Cobrar (Facturación, Análisis y Cobranza), Cuentas por Pagar (imputación de gastos y asociados a la correcta segregación de centros de costos), contabilidad de costos de importación y producción (manejo de costo promedio e implementación de costo estándar, incluyendo análisis de rutas financieras, análisis de absorción y control de gastos de producción y distribución), Supervisión de los departamentos de Tesoreria, RRHH, elaboración y generación de reportes de gestión diarios, semanales, mensuales y anuales (relacionados principalmente con venta y gross margin), preparación de estados financieros locales y reportes a casa matriz (Balance, Estados de Perdidas y Ganancias, Flujo de Efectivo, Tendencia,Ppresupuesto, Plan, etc.). Dichos estados financieros con comentarios comparativos respecto a Budget, Forecast, Last Year y Last Month. Planeamiento y ejecución del proceso presupuestario anual top down y a nivel de centro de costos y unidades de negocios. Coordinación de Auditorias Financieras, Auditorias Tributarias y Auditorias Internas, Control de Inventarios en planta central y tiendas, generación de procedimientos tendientes a crear un buen ambiente de control y mejorar el sistema de control interno (Manual de cuentas, levantamiento del activo fijo y su control, descripción de cargos, etc.).
+                  Supervisión y control de los procesos relacionados con impuestos de IVA, Renta y Otros.
+                  Participación y Supervisión en la implementación de ERP Oracle EBS módulos financieros y reportes afines. Participación en seminarios internos de la empresa buscando excelencia operacional y financiera, benchmarking con filiales de otros países y perfeccionamiento para la ejecución de buenas practicas de negocio, financieras y contables.
+                  Participacion y Supervisión de ERP SAP BO, en modulos Financieros, Producción y de Ventas.
                 </Typography>
               </Paper>
               <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-                Archives
+                Artículos
               </Typography>
               {archives.map(archive => (
                 <Link display="block" variant="body1" href="#" key={archive}>
@@ -293,7 +277,7 @@ export default function Landing() {
                 Social
               </Typography>
               {social.map(network => (
-                <Link display="block" variant="body1" href="#" key={network}>
+                <Link display="block" variant="body1" href="https://www.linkedin.com/in/julio-patricio-hernandez-cisternas-ab9a332b/" key={network}>
                   {network}
                 </Link>
               ))}
@@ -306,10 +290,10 @@ export default function Landing() {
       <footer className={classes.footer}>
         <Container maxWidth="lg">
           <Typography variant="h6" align="center" gutterBottom>
-            Footer
+            ASCONTLAB
           </Typography>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
+            Asesorías contables, tributarías y laborales
           </Typography>
           <MadeWithLove />
         </Container>
