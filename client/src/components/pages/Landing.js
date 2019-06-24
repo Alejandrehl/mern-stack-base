@@ -1,29 +1,27 @@
 import React, { Fragment } from 'react'
-import BusinessImg from '../../assets/images/business.jpg'
+import BusinessImg from '../../assets/images/black&grey-handshake.jpg'
 
 const Landing = () => {
     return (
         <Fragment>
             <div class="parallax-container">
+            <div className="section no-pad-bot" id="index-banner" style={{ marginBottom: '30px' }}>
+                <br/><br/>
+                <h1 className="header center black-text">ASCONTLAB</h1>
+                <div className="center" style={{ marginBottom: '100px' }}>
+                    <h5 className="header col s12 light">
+                        Asesorías contables, tributarías y laborales
+                    </h5>
+                </div>
+                <div className="center">
+                    <a href="http://materializecss.com/getting-started.html" id="download-button" className="btn-large waves-effect waves-light black">Contactar</a>
+                </div>
+                <br/><br/>
+            </div>
                 <div class="parallax">
                     <img src={BusinessImg} />
                 </div>
             </div>
-            <div className="section no-pad-bot" id="index-banner" style={{ marginBottom: '30px' }}>
-                <br/><br/>
-                <h1 className="header center black-text">Starter Template</h1>
-                <div className="center" style={{ marginBottom: '100px' }}>
-                    <h5 className="header col s12 light">
-                        A modern responsive front-end framework based on Material Design
-                    </h5>
-                </div>
-                <div className="center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button" className="btn-large waves-effect waves-light black">Get Started</a>
-                </div>
-                <br/><br/>
-            </div>
-
-
             <div className="section">
                 <div className="row">
                     <div className="col s12 m4 l4">
