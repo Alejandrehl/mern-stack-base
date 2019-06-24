@@ -4,8 +4,9 @@ import Alerts from './components/layouts/Alerts'
 import Landing from './components/pages/landing/Landing'
 import Home from './components/pages/Home'
 import Navbar from './components/layouts/Navbar'
-import Register from './components/auth/Register';	
-import Login from './components/auth/Login';
+import Footer from './components/layouts/Footer'
+import Register from './components/auth/Register'	
+import Login from './components/auth/Login'
 import PrivateRoute from './components/routing/PrivateRoutes'
 
 import ArticleState from './context/article/ArticleState'
@@ -44,6 +45,7 @@ const App = () => {
                   </Switch>
                 </div>
               </div>
+              <Footer />
             </Fragment>
           </Router>
         </AlertState>

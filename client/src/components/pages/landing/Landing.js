@@ -283,18 +283,5 @@ export default function Landing() {
           </Grid>
         </main>
       </Container>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Typography variant="h6" align="center" gutterBottom>
-            ASCONTLAB
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Asesorías contables, tributarías y laborales
-          </Typography>
-          <MadeWithLove />
-        </Container>
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   )}
