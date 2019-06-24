@@ -1,4 +1,5 @@
 export const GET_ARTICLES = 'GET_ARTICLES'
+export const GET_ARTICLES_LIST = 'GET_ARTICLES_LIST'
 export const ADD_ARTICLE = 'ADD_ARTICLE'
 export const DELETE_ARTICLE = 'DELETE_ARTICLE'
 export const SET_CURRENT = 'SET_CURRENT'

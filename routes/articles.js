@@ -31,6 +31,20 @@ router.get('/list', async (req, res) => {
     }
 })
 
+// @route   GET api/articles/show
+// @desc    Get one Article by id
+// @access  Private
+router.get('/:id', async (req, res) => {
+    try {
+        let article = await Article.findById(req.params.id)
+        if (!article) return res.status(404).json({ msg: 'Article not found.' })
+        res.json(article)
+    } catch(err) {
+        console.error(err.message)
+        res.status(500).send('Server Error')
+    }
+})
+
 // @route   POST api/articles
 // @desc    Add new article
 // @access  Private

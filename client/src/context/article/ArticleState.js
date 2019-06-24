@@ -4,6 +4,7 @@ import ArticleContext from './articleContext'
 import articleReducer from './articleReducer'
 import {
     GET_ARTICLES,
+    GET_ARTICLES_LIST,
     ADD_ARTICLE,
     DELETE_ARTICLE,
     SET_CURRENT,
@@ -30,6 +31,16 @@ const ArticleState = props => {
         try {
             const res = await axios.get('/api/articles')
             dispatch({ type: GET_ARTICLES, payload: res.data })
+        } catch (err) {
+            dispatch({ type: ARTICLE_ERROR, payload: err.response.msg })
+        }
+    }
+
+    // Get Articles List
+    const getArticlesList = async () => {
+        try {
+            const res = await axios.get('/api/articles/list')
+            dispatch({ type: GET_ARTICLES_LIST, payload: res.data })
         } catch (err) {
             dispatch({ type: ARTICLE_ERROR, payload: err.response.msg })
         }
@@ -106,6 +117,7 @@ const ArticleState = props => {
                 filtered: state.filtered,
                 error: state.error,
                 getArticles,
+                getArticlesList,
                 addArticle,
                 deleteArticle,
                 setCurrent,

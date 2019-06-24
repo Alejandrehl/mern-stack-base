@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import ArticleContext from '../../../context/article/articleContext'
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +17,7 @@ import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
+import Spinner from '../../layouts/Spinner'
 
 function MadeWithLove() {
   return (
@@ -140,6 +142,18 @@ const social = ['LinkedIn'];
 export default function Landing() {
   const classes = useStyles();
 
+  const articleContext = useContext(ArticleContext)
+  const { articles, getArticlesList, loading } = articleContext
+
+  useEffect( () =>{
+      getArticlesList()
+      // eslint-disable-next-line
+  }, [])
+
+  if (articles !== null && articles.length === 0 && !loading) {
+    return <h4>Aún no se han agregado artículos.</h4>
+}
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -250,6 +264,26 @@ export default function Landing() {
               </Typography>
               <Divider />
               {/* AQUI DEBEN IR LOS ULTIMOS 3 POSTS ESCRITOS */}
+              { articles !== null && !loading ?
+                articles.map(article => (
+                  <div className="col s12 m12 l12" key={article._id}>
+                    <h2 className="header">{article.title}</h2>
+                    <div className="card horizontal">
+                      <div className="card-stacked">
+                        <div className="card-content">
+                          <p>
+                            {article.content}
+                          </p>
+                        </div>
+                        <div className="card-action">
+                          <a href="#">Leer más</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )) :
+                <Spinner />
+              } 
             </Grid>
             {/* End main content */}
             {/* Sidebar */}

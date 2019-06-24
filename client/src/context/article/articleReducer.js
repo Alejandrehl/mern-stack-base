@@ -1,5 +1,6 @@
 import {
     GET_ARTICLES,
+    GET_ARTICLES_LIST,
     ADD_ARTICLE,
     DELETE_ARTICLE,
     SET_CURRENT,
@@ -14,6 +15,7 @@ import {
 export default (state, action) => {
     switch(action.type) {
         case GET_ARTICLES:
+        case GET_ARTICLES_LIST:
             return {
                 ...state,
                 articles: action.payload,
